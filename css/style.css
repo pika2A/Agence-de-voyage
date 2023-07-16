@@ -40,6 +40,11 @@ body {
   margin-bottom: 8px;
 }
 
+.section-subtitle {
+  font-size: var(--text-font-size18);
+  font-weight: bold;
+}
+
 .card {
   background-color: white;
   border-radius: 20px;
@@ -307,6 +312,23 @@ form {
 
 .card-activites .card-title {
   padding: 20px 19px;
+}
+
+/******************section footer**************************/
+.section-footer {
+  background-color: #F2F2F2;
+  display: flex;
+  margin-top: 35px;
+}
+
+.footer-list {
+  height: 163px;
+  width: 33%;
+  padding: 20px;
+}
+
+.footer-list li {
+  padding-bottom: 15px;
 }
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
