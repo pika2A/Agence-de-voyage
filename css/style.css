@@ -10,8 +10,8 @@
 
 :root {
   --font-weight-700: 700;
-  --text-font-size18: 18px;
-  --text-font-size17: 17px;
+  --text-font-size18: 1.12rem;
+  --text-font-size17: 1.06rem;
   --main-color: #0065fc;
   --main-bg-color: #f2f2f2;
   --filter-bg-color: #deebff;
@@ -25,6 +25,7 @@ body {
   display: flex;
   justify-content: center;
   box-sizing: border-box;
+  hyphens: auto;
 }
 
 .main-container {
@@ -36,7 +37,7 @@ body {
 
 .section-title {
   margin: 0;
-  font-size: 22px;
+  font-size: 1.37rem;
   margin-bottom: 8px;
 }
 
@@ -57,7 +58,7 @@ body {
 }
 
 .card-title {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .euro {
@@ -81,7 +82,7 @@ body {
 }
 
 .bar_nav nav {
-  width: 344px;
+  width: 21.5rem;
   height: 35px;
   display: flex;
   justify-content: space-around;
@@ -108,15 +109,15 @@ form {
 
 .bar--site-search {
   display: flex;
-  width: 418px;
-  height: 49px;
+  width: 26.125rem;
+  height: 3.063rem;
   border-radius: 15px 0 0 15px;
 
 }
 
 .fa-location-dot {
   color: black;
-  width: 50px;
+  width: 3.125rem;
   background-color: #F2F2F2;
   display: flex;
   justify-content: center;
@@ -127,7 +128,7 @@ form {
 
 .input--site-search {
   width: 60%;
-  font-size: 18px;
+  font-size: var(--text-font-size18);
   font-weight: 700;
   outline: none;
   text-align: center;
@@ -135,7 +136,7 @@ form {
 }
 
 .btn--site-search {
-  width: 132px;
+  width: 8.25rem;
   height: 100%;
   background-color: var(--main-color);
   color: var(--main-bg-color);
@@ -154,8 +155,8 @@ form {
 .filtre--bar {
   display: flex;
   margin-bottom: 32px;
-  width: 758px;
-  height: 50px;
+  width: 47.375rem;
+  /*height: 3.125rem;*/
   justify-content: space-around;
   align-items: center;
 }
@@ -167,7 +168,7 @@ form {
 .btn--filtre {
   font-size: var(--text-font-size17);
   font-weight: var(--font-weight-700);
-  height: 50px;
+  height: 3.125rem;
   padding: 4px 19px;
   gap: 10px;
   display: flex;
@@ -225,17 +226,22 @@ form {
 }
 
 .hebergements-card .card {
-  height: 207px;
   width: 30%;
   margin-top: 33px;
 }
 
 .hebergements-card img {
   width: 100%;
-  height: 136px;
+  height: 8.5rem;
   object-fit: cover;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+}
+
+.card-title,
+.card-subtitle,
+.card-rating {
+  padding: 3px 0 3px 8px;
 }
 
 /****** Populaires ***********/
@@ -256,7 +262,7 @@ form {
 
 .populaires-cards img {
   width: 33%;
-  height: 136px;
+  height: 8.5rem;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
@@ -299,12 +305,13 @@ form {
   background-color: white;
   border-radius: 20px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-  height: 439px;
+  /*height: 439px;**/
   width: 23%;
 }
 
 .card-activites img {
-  height: 380px;
+  object-fit: cover;
+  height: 23.75rem;
   width: 100%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -316,13 +323,14 @@ form {
 
 /******************section footer**************************/
 .section-footer {
+  width: 100%;
   background-color: #F2F2F2;
   display: flex;
   margin-top: 35px;
 }
 
 .footer-list {
-  height: 163px;
+  /*height: 163px;*/
   width: 33%;
   padding: 20px;
 }
@@ -359,16 +367,62 @@ form {
     width: 30%;
   }
 
-  .populaires-cards .card-title {
+  .card-title {
     font-size: 14px;
   }
 
-  .populaires-cards .card-subtitle {
+  card-subtitle {
     font-size: 13px;
   }
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-  /* ... */
+  .hebergements-and-populaires {
+    margin-top: 20px;
+  }
+
+  .herbergements,
+  .populaires {
+    width: 100%;
+  }
+
+  .bar--site-search {
+    width: 100%;
+  }
+
+  .btn--site-search {
+    width: 20%;
+  }
+
+  .btn--site-search i {
+    display: block;
+    color: white;
+  }
+
+  .btn--site-search span {
+    display: none;
+  }
+
+  .filtre--bar {
+    width: auto;
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+
+  .bar--info {
+    display: none;
+  }
+
+  .footer-list,
+  li {
+    width: 20%;
+  }
 }
+
+/*
+img object fit cover
+padding de mon h3 dans les activites
+container mobile
+espace entre mes ligne sur hegerment
+*/
