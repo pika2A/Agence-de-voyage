@@ -414,6 +414,16 @@ form {
     display: none;
   }
 
+  .card-activites {
+    overflow: auto;
+  }
+
+
+
+  .card-activites img {
+    height: 50%;
+  }
+
   .footer-list,
   li {
     width: 20%;
